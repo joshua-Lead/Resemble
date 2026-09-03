@@ -10,7 +10,7 @@ binding = "ASSETS"
 [[d1_databases]]
 binding = "DB"
 database_name = "resemble-db"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "ef6305db-ead3-46aa-ae3c-00a5885d0ca6"
 
 [vars]
 PAYMENT_MODE = "demo"
