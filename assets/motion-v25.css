@@ -1,0 +1,16 @@
+
+/* RESEMBLE v25 motion integration */
+:root{--rs-red:#d60000;--rs-black:#050505;--rs-white:#f7f7f7}
+.rs-motion-hero{position:relative;min-height:88vh;overflow:hidden;background:#050505}
+.rs-motion-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.rs-motion-overlay{position:relative;z-index:2;min-height:88vh;display:grid;align-items:end;padding:7vw;color:#fff}
+.rs-motion-overlay h1{font-size:clamp(58px,10vw,150px);line-height:.78;letter-spacing:-.08em;margin:0}
+.rs-motion-overlay h1 span{color:var(--rs-red)}
+.rs-motion-grid{position:absolute;inset:0;z-index:0;opacity:.22;background:linear-gradient(90deg,transparent 49.7%,#fff2 50%,transparent 50.3%),linear-gradient(#fff1 1px,transparent 1px);background-size:100% 100%,100% 85px;transform:perspective(600px) rotateX(66deg) translateY(34%);animation:rsGrid 9s linear infinite}
+@keyframes rsGrid{to{transform:perspective(600px) rotateX(66deg) translateY(42%)}}
+.rs-motion-badge{position:absolute;right:6%;top:12%;width:230px;height:230px;border:1px solid #444;border-radius:50%;display:grid;place-items:center;z-index:2;color:#d60000;font-size:140px;font-weight:900;font-style:italic;box-shadow:0 0 90px #fff1;animation:rsFloat 6s ease-in-out infinite}
+@keyframes rsFloat{50%{transform:translateY(-14px) rotate(3deg)}}
+.rs-motion-section{position:relative;min-height:100vh;display:grid;place-items:center;background:#080808;overflow:hidden}
+.rs-motion-section .scan{position:absolute;width:70%;height:1px;background:#d60000;box-shadow:0 0 24px #d60000;animation:rsScan 4s ease-in-out infinite}
+@keyframes rsScan{0%,100%{transform:translateY(-40vh);opacity:0}20%,80%{opacity:1}50%{transform:translateY(40vh)}}
+@media(max-width:760px){.rs-motion-overlay{padding:24px}.rs-motion-badge{width:160px;height:160px;font-size:95px;right:7%;top:17%}}

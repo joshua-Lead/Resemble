@@ -1,0 +1,9 @@
+.git
+.gitignore
+.env
+.env.*
+*.zip
+node_modules
+npm-debug.log
+START-RESEMBLE.bat
+START-PRODUCTION.bat

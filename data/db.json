@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "id": "RS-ADMIN",
+      "name": "RESEMBLE ADMIN",
+      "email": "admin@resemble.local",
+      "passwordHash": "7513b5e7d67072a7f4393203bfbd2352:4c2a1f5addb8a8e5d95b4add1a84a9a92faee77a426ea7026575b57a09ff93d93d8d4a0d129a01b90806dceeca89743bb6b307ee10de8edab6da4fbb7492f4d4",
+      "role": "admin",
+      "createdAt": "2026-09-03T06:47:54.953Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "aero-jacket",
+      "name": "AERO JACKET",
+      "code": "AERO 001",
+      "category": "JACKETS",
+      "price": 6990,
+      "compareAt": 7990,
+      "description": "Lightweight windproof outerwear engineered for movement.",
+      "materials": "Aero-shell nylon, technical mesh lining",
+      "colors": [
+        "Obsidian Black",
+        "Performance Red",
+        "Arctic White"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "badge": "BESTSELLER",
+      "stock": 24,
+      "active": true,
+      "featured": true
+    },
+    {
+      "id": "struct-hoodie",
+      "name": "STRUCT HOODIE",
+      "code": "STRUCT 002",
+      "category": "HOODIES",
+      "price": 4990,
+      "compareAt": null,
+      "description": "Structured heavyweight hoodie with engineered paneling.",
+      "materials": "Premium cotton fleece, bonded rib",
+      "colors": [
+        "Obsidian Black",
+        "Titanium"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 31,
+      "active": true,
+      "featured": true
+    },
+    {
+      "id": "velocity-tee",
+      "name": "VELOCITY TEE",
+      "code": "VELOCITY 003",
+      "category": "SHIRTS",
+      "price": 2490,
+      "compareAt": null,
+      "description": "Performance jersey tee with a clean aerodynamic silhouette.",
+      "materials": "Technical stretch jersey",
+      "colors": [
+        "Obsidian Black",
+        "Arctic White",
+        "Performance Red"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 46,
+      "active": true,
+      "featured": false
+    },
+    {
+      "id": "titan-pants",
+      "name": "TITAN PANTS",
+      "code": "TITAN 004",
+      "category": "PANTS",
+      "price": 4990,
+      "compareAt": null,
+      "description": "Tapered utility trousers built for daily motion.",
+      "materials": "Stretch technical twill",
+      "colors": [
+        "Obsidian Black",
+        "Graphite"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 18,
+      "active": true,
+      "featured": true
+    }
+  ],
+  "carts": {},
+  "addresses": {},
+  "orders": [],
+  "sessions": {},
+  "payments": {},
+  "webhookEvents": {}
+}

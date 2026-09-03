@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: resemble-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: resemble
+      POSTGRES_USER: resemble
+      POSTGRES_PASSWORD: change-me
+    volumes:
+      - resemble_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U resemble -d resemble"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  resemble:
+    build: .
+    container_name: resemble-store
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8787:8787"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:8787/health >/dev/null 2>&1 || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+volumes:
+  resemble_pg:

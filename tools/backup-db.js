@@ -1,0 +1,10 @@
+const fs = require('fs');
+const path = require('path');
+const source = path.join(process.cwd(), 'data', 'db.json');
+const backupDir = path.join(process.cwd(), 'data', 'backups');
+if (!fs.existsSync(source)) throw new Error('data/db.json not found');
+fs.mkdirSync(backupDir, { recursive: true });
+const stamp = new Date().toISOString().replace(/[:.]/g,'-');
+const target = path.join(backupDir, `db-${stamp}.json`);
+fs.copyFileSync(source, target);
+console.log(`Backup created: ${target}`);
